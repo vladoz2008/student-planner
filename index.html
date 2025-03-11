@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ежедневник студента</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Ежедневник студента</h1>
+
+        <!-- Переключатель темы -->
+        <button id="themeToggle">Переключить тему</button>
+
+        <!-- Добавление предмета -->
+        <h2>Предметы</h2>
+        <input type="text" id="subjectInput" placeholder="Добавить предмет">
+        <button onclick="addSubject()">Добавить</button>
+        <ul id="subjectList"></ul>
+
+        <!-- Заметки -->
+        <div id="notesSection" style="display: none;">
+            <h3>Заметки для <span id="noteSubject"></span></h3>
+            <textarea id="noteInput" placeholder="Ваши заметки"></textarea>
+            <button onclick="saveNote()">Сохранить заметку</button>
+        </div>
+
+        <!-- Статистика -->
+        <h2>Статистика времени</h2>
+        <div id="stats"></div>
+
+        <!-- Добавление задачи -->
+        <h2>Задачи</h2>
+        <input type="text" id="taskInput" placeholder="Добавить задачу">
+        <input type="date" id="taskDeadline">
+        <button onclick="addTask()">Добавить</button>
+        <ul id="taskList"></ul>
+
+        <!-- Календарь -->
+        <h2>Календарь</h2>
+        <div id="calendar"></div>
+    </div>
+
+    <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

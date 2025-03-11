@@ -1,0 +1,74 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg: #fff;
+    --button-bg: #007bff;
+    --button-text: #fff;
+}
+
+body.dark-theme {
+    --bg-color: #333;
+    --text-color: #f4f4f4;
+    --card-bg: #555;
+    --button-bg: #00b7ff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: var(--card-bg);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#stats {
+    background: var(--card-bg);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#calendar {
+    margin-top: 20px;
+}
